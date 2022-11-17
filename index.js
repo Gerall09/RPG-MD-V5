@@ -17,7 +17,7 @@ const { say } = cfonts
 const rl = createInterface(process.stdin, process.stdout)
 
 say('KingOfBear', {
-  font: 'xnxx',
+  font: 'chrome',
   align: 'center',
   colors: ['red', 'magenta']
 })
