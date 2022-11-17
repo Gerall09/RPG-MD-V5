@@ -123,7 +123,7 @@ global.thumbs = ['https://telegra.ph/file/ac2ff180b8b620b075cfd.jpg']
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.thumbBanned = 'https://telegra.ph/file/0331c714622f0f984a2e5.jpg'
 global.thumbWarn = 'https://telegra.ph/file/0331c714622f0f984a2e5.jpg'
-global.botintro = 'Hallo, Kenalin saya Yuki BOT Saya akan membantu Anda kapan pun & Dimana pun, Saya asisten bot WhatsApp yang di buat oleh *ᴹᴿ᭄ King Of Bear ×፝֟͜×* Saya di rilis pada tanggal\n🗓 ️_16/10/2022_'
+global.botintro = 'Hallo, Kenalin saya hanya BOT Saya akan membantu Anda kapan pun & Dimana pun, Saya asisten bot WhatsApp yang di buat oleh *ᴹᴿ᭄ King Of Bear ×፝֟͜×* Saya di rilis pada tanggal\n🗓 ️_16/10/2022_'
 global.intro = 'https://telegra.ph/file/ac2ff180b8b620b075cfd.jpg'
 /*============== GLOBAL BIO ==============*/
 global.nameowner = 'ᴹᴿ᭄ Rall ×፝֟͜×'
