@@ -29,10 +29,10 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await conn.getName(i + '@s.whatsapp.net'),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:INSTAGRAM: rall_nation09\nitem2.X-ABLabel:Follow Vroh\nitem3.URL:Donate: https://saweria.co/Gerall\nitem3.X-ABLabel:Donate\nitem4.ADR:;;Isekai;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await conn.getName(i + '@s.whatsapp.net')}\nFN:${await conn.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:INSTAGRAM: rall_nation09\nitem2.X-ABLabel:Follow Vroh\nitem3.URL:Donate: https://saweria.co/Gerall\nitem3.X-ABLabel:Donate\nitem4.ADR:;;Isekai;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
-	ZimBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+	.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
     }
 	]
 	await delay(100)
