@@ -24,10 +24,16 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let pp = await conn.profilePictureUrl(who, 'image').catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png")
 	conn.p[id] = [
-	await conn.sendContact(m.chat, kontak2, ftroli, { contextInfo: { externalAdReply :{ 
-     showAdAttribution: true, 
-      }} 
-   })
+	await conn.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+	let list = []
+	for (let i of kon) {
+	    list.push({
+	    	displayName: await conn.getName(i + '@s.whatsapp.net'),
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nFN:${await ZimBotInc.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:INSTAGRAM: rall_nation09\nitem2.X-ABLabel:Follow Vroh\nitem3.URL:Donate: https://saweria.co/Gerall\nitem3.X-ABLabel:Donate\nitem4.ADR:;;Isekai;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    })
+	}
+	ZimBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+    }
 	]
 	await delay(100)
   const ultah = new Date(`${ultahowner} 00:00:01`)
